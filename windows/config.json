@@ -1,0 +1,28 @@
+{
+  "name": "AM PC Remote",
+  "port": 9600,
+  "discoveryPort": 9601,
+  "requirePin": true,
+  "broadcast": true,
+  "broadcastIntervalMs": 15000,
+  "allowPower": true,
+  "tokenDays": 365,
+  "tray": true,
+  "openAdminOnStart": true,
+  "screen": {
+    "maxWidth": 1280,
+    "quality": 55,
+    "minIntervalMs": 350
+  },
+  "apps": [
+    { "id": "explorer", "name": "File Explorer", "target": "explorer.exe" },
+    { "id": "notepad", "name": "Notepad", "target": "notepad.exe" },
+    { "id": "calc", "name": "Calculator", "target": "calc.exe" },
+    { "id": "taskmgr", "name": "Task Manager", "target": "taskmgr.exe" },
+    { "id": "settings", "name": "Windows Settings", "target": "ms-settings:" },
+    { "id": "browser", "name": "Default Browser", "target": "https://www.google.com" }
+  ],
+  "allowedPaths": [
+    "C:\\Users\\Public"
+  ]
+}

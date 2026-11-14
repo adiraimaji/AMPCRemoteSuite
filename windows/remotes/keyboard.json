@@ -1,0 +1,45 @@
+{
+  "id": "am.keyboard",
+  "name": "Keyboard",
+  "icon": "⌨",
+  "color": "#22c55e",
+  "description": "Live typing, every key and shortcuts",
+  "layout": {
+    "type": "grid",
+    "rows": [
+      {
+        "fixed": 46,
+        "children": [
+          { "type": "status", "bind": "process", "label": "Typing into", "grow": 4 },
+          { "type": "keysToggle", "className": "keys-cell" }
+        ]
+      },
+      {
+        "panel": true,
+        "className": "keys-row",
+        "children": [ { "type": "specialKeys" } ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "input", "id": "kbd", "placeholder": "Paste or compose a block of text…", "multiline": true, "enterToSend": true }
+        ]
+      },
+      {
+        "fixed": 44,
+        "children": [
+          { "type": "button", "text": "Send text", "icon": "➤", "action": "__text", "needsInput": "kbd", "primary": true, "compact": true },
+          { "type": "button", "text": "Copy", "icon": "⧉", "action": "__keys", "args": { "keys": ["ctrl+c"] }, "compact": true },
+          { "type": "button", "text": "Paste", "icon": "📋", "action": "__keys", "args": { "keys": ["ctrl+v"] }, "compact": true }
+        ]
+      },
+      {
+        "fixed": 52,
+        "children": [
+          { "type": "liveInput", "placeholder": "Live typing — every key goes to your PC" }
+        ]
+      }
+    ]
+  },
+  "actions": {}
+}

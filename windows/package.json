@@ -1,0 +1,25 @@
+{
+  "name": "am-pc-remote",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AM PC Remote - control a Windows PC from your phone over your LAN",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "pin": "node src/server.js pin",
+    "pin:new": "node src/server.js pin new",
+    "test": "node test/actions-test.mjs && node test/remotes-test.mjs && node test/util-test.mjs",
+    "test:native": "node test/native-smoke.mjs",
+    "test:server": "node test/server-smoke.mjs",
+    "build:exe": "node build-exe.mjs",
+    "check": "node --check src/server.js && node --check src/auth.js && node --check src/native.js && node --check src/remotes.js && node --check src/actions.js && node --check src/util.js && node --check web/app.js && node --check web/sw.js && node --check test/actions-test.mjs && node --check test/remotes-test.mjs && node --check test/util-test.mjs && node --check build-exe.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "postject": "^1.0.0-alpha.6",
+    "rcedit": "^5.0.2"
+  }
+}

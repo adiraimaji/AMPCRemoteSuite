@@ -1,0 +1,33 @@
+{
+  "id": "am.clipboard",
+  "name": "Clipboard",
+  "icon": "📋",
+  "color": "#eab308",
+  "description": "Move text between phone and PC",
+  "layout": {
+    "type": "grid",
+    "rows": [
+      {
+        "weight": 5,
+        "children": [
+          { "type": "input", "id": "clipboard", "placeholder": "Clipboard text…", "multiline": true }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Send to PC", "icon": "⬆", "action": "__clipboard", "args": { "op": "set" }, "needsInput": "clipboard", "primary": true },
+          { "type": "button", "text": "Get from PC", "icon": "⬇", "action": "__clipboard", "args": { "op": "get" }, "fillsInput": "clipboard" }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Copy to phone", "icon": "⧉", "local": "copy", "source": "clipboard" },
+          { "type": "button", "text": "Paste on PC", "icon": "⌘", "action": "__keys", "args": { "keys": ["ctrl+v"] } }
+        ]
+      }
+    ]
+  },
+  "actions": {}
+}

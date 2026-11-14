@@ -1,0 +1,36 @@
+{
+  "id": "am.presentation",
+  "name": "Presenter",
+  "icon": "▷",
+  "color": "#f43f5e",
+  "description": "Slides, presenter keys and black screen",
+  "layout": {
+    "type": "grid",
+    "rows": [
+      {
+        "weight": 4,
+        "children": [
+          { "type": "button", "text": "Previous slide", "icon": "‹", "action": "__keys", "args": { "keys": ["left"] } },
+          { "type": "button", "text": "Next slide", "icon": "›", "action": "__keys", "args": { "keys": ["right"] }, "primary": true }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Start show", "icon": "▶", "action": "__keys", "args": { "keys": ["f5"] } },
+          { "type": "button", "text": "End show", "icon": "⏹", "action": "__keys", "args": { "keys": ["esc"] } },
+          { "type": "button", "text": "Black", "icon": "◼", "action": "__keys", "args": { "keys": ["b"] } },
+          { "type": "button", "text": "White", "icon": "◻", "action": "__keys", "args": { "keys": ["w"] } }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Fullscreen", "icon": "⛶", "action": "__keys", "args": { "keys": ["f5"] } },
+          { "type": "button", "text": "Laser pointer", "icon": "•", "action": "__keys", "args": { "keys": ["ctrl+l"] } }
+        ]
+      }
+    ]
+  },
+  "actions": {}
+}

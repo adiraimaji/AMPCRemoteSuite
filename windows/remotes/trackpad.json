@@ -1,0 +1,28 @@
+{
+  "id": "am.trackpad",
+  "name": "Trackpad",
+  "icon": "◉",
+  "color": "#5b8cff",
+  "description": "Large touchpad with every key and live typing",
+  "layout": {
+    "type": "grid",
+    "tools": [
+      { "type": "keyboardToggle" },
+      { "type": "keysToggle" }
+    ],
+    "rows": [
+      {
+        "panel": true,
+        "className": "keys-row",
+        "children": [ { "type": "specialKeys" } ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "trackpad", "hint": "Tap = left · 2 fingers = right · 3 fingers = middle · double-tap or hold, then drag · 2 fingers = scroll" }
+        ]
+      }
+    ]
+  },
+  "actions": {}
+}

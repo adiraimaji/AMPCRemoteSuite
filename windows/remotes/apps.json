@@ -1,0 +1,48 @@
+{
+  "id": "am.apps",
+  "name": "Apps",
+  "icon": "▦",
+  "color": "#f59e0b",
+  "description": "Launch apps and windows",
+  "layout": {
+    "type": "grid",
+    "rows": [
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "File Explorer", "icon": "📁", "action": "__open", "args": { "target": "explorer" } },
+          { "type": "button", "text": "Notepad", "icon": "📝", "action": "__open", "args": { "target": "notepad" } }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Calculator", "icon": "🧮", "action": "__open", "args": { "target": "calc" } },
+          { "type": "button", "text": "Settings", "icon": "⚙", "action": "__open", "args": { "target": "settings" } }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Task Manager", "icon": "📊", "action": "__open", "args": { "target": "taskmgr" } },
+          { "type": "button", "text": "Browser", "icon": "🌐", "action": "__open", "args": { "target": "browser" } }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Show desktop", "icon": "▭", "action": "__window", "args": { "mode": "desktop" } },
+          { "type": "button", "text": "Task view", "icon": "▤", "action": "__window", "args": { "mode": "taskview" } }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Alt + Tab", "icon": "⇄", "action": "__window", "args": { "mode": "switch" } },
+          { "type": "button", "text": "Close window", "icon": "✕", "action": "__keys", "args": { "keys": ["alt+f4"] } }
+        ]
+      }
+    ]
+  },
+  "actions": {}
+}

@@ -1,0 +1,38 @@
+{
+  "id": "am.browser",
+  "name": "Browser",
+  "icon": "🌐",
+  "color": "#3b82f6",
+  "description": "Navigate tabs and pages",
+  "layout": {
+    "type": "grid",
+    "rows": [
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Back", "icon": "‹", "action": "__keys", "args": { "keys": ["alt+left"] } },
+          { "type": "button", "text": "Forward", "icon": "›", "action": "__keys", "args": { "keys": ["alt+right"] } },
+          { "type": "button", "text": "Reload", "icon": "⟳", "action": "__keys", "args": { "keys": ["f5"] } }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "New tab", "icon": "+", "action": "__keys", "args": { "keys": ["ctrl+t"] }, "primary": true },
+          { "type": "button", "text": "Close tab", "icon": "✕", "action": "__keys", "args": { "keys": ["ctrl+w"] } },
+          { "type": "button", "text": "Address bar", "icon": "⌕", "action": "__keys", "args": { "keys": ["ctrl+l"] } }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Reopen tab", "icon": "↺", "action": "__keys", "args": { "keys": ["ctrl+shift+t"] }, "compact": true },
+          { "type": "button", "text": "Zoom +", "icon": "＋", "action": "__keys", "args": { "keys": ["ctrl+equals"] }, "compact": true },
+          { "type": "button", "text": "Zoom −", "icon": "－", "action": "__keys", "args": { "keys": ["ctrl+minus"] }, "compact": true },
+          { "type": "button", "text": "Fullscreen", "icon": "⛶", "action": "__keys", "args": { "keys": ["f11"] }, "compact": true }
+        ]
+      }
+    ]
+  },
+  "actions": {}
+}

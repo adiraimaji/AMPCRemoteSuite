@@ -1,0 +1,21 @@
+# Build output
+.build/
+dist/
+*.apk
+*.aab
+*.idsig
+
+# Signing material - never commit these
+keystore.properties
+*.jks
+*.keystore
+
+# Local platform jar (large, download from the Android SDK)
+android.jar
+
+# OS / editor junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/

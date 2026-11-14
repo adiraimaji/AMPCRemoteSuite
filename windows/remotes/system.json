@@ -1,0 +1,46 @@
+{
+  "id": "am.system",
+  "name": "System",
+  "icon": "◎",
+  "color": "#a855f7",
+  "description": "Live PC health and processes",
+  "layout": {
+    "type": "grid",
+    "rows": [
+      {
+        "weight": 2,
+        "children": [
+          { "type": "stat", "bind": "cpu", "label": "CPU", "unit": "%", "max": 100 },
+          { "type": "stat", "bind": "mem", "label": "Memory", "unit": "%", "max": 100 }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "stat", "bind": "battery", "label": "Battery", "unit": "%", "max": 100 },
+          { "type": "stat", "bind": "idle", "label": "Idle", "unit": "s" }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "status", "bind": "window", "label": "Active window" }
+        ]
+      },
+      {
+        "weight": 4,
+        "children": [
+          { "type": "procs", "title": "Top processes", "count": 6 }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Task Manager", "icon": "📊", "action": "__open", "args": { "target": "taskmgr" } },
+          { "type": "button", "text": "Refresh", "icon": "⟳", "local": "refresh" }
+        ]
+      }
+    ]
+  },
+  "actions": {}
+}

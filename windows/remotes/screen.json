@@ -1,0 +1,27 @@
+{
+  "id": "am.screen",
+  "name": "Screen",
+  "icon": "🖥",
+  "color": "#14b8a6",
+  "description": "Live screen view and remote clicking",
+  "layout": {
+    "type": "grid",
+    "rows": [
+      {
+        "weight": 7,
+        "children": [
+          { "type": "screen", "refreshMs": 900, "tapMode": "click" }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Left click", "icon": "◧", "action": "__pointer", "args": { "op": "click" }, "primary": true },
+          { "type": "button", "text": "Right click", "icon": "◨", "action": "__pointer", "args": { "op": "rightclick" } },
+          { "type": "button", "text": "Show desktop", "icon": "▭", "action": "__window", "args": { "mode": "desktop" }, "compact": true }
+        ]
+      }
+    ]
+  },
+  "actions": {}
+}

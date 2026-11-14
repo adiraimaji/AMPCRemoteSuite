@@ -1,0 +1,40 @@
+{
+  "id": "am.power",
+  "name": "Power",
+  "icon": "⏻",
+  "color": "#ef4444",
+  "description": "Lock, sleep and power options",
+  "layout": {
+    "type": "grid",
+    "rows": [
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Lock PC", "icon": "🔒", "action": "__power", "args": { "mode": "lock" }, "primary": true }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Screen off", "icon": "🌙", "action": "__power", "args": { "mode": "monitoroff" } },
+          { "type": "button", "text": "Sleep", "icon": "💤", "action": "__power", "args": { "mode": "sleep" } }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Restart", "icon": "↻", "action": "__power", "args": { "mode": "restart" }, "confirm": "Restart the PC now?", "danger": true },
+          { "type": "button", "text": "Shut down", "icon": "⏻", "action": "__power", "args": { "mode": "shutdown" }, "confirm": "Shut down the PC now?", "danger": true }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "status", "bind": "battery", "label": "Battery" },
+          { "type": "status", "bind": "uptime", "label": "Uptime" }
+        ]
+      }
+    ]
+  },
+  "actions": {}
+}

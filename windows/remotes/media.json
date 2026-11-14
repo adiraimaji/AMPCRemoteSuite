@@ -1,0 +1,44 @@
+{
+  "id": "am.media",
+  "name": "Media",
+  "icon": "▶",
+  "color": "#0ea5e9",
+  "description": "Playback, volume and mute",
+  "layout": {
+    "type": "grid",
+    "rows": [
+      {
+        "weight": 1,
+        "children": [
+          { "type": "slider", "label": "Volume", "bind": "volume", "action": "__volume", "args": { "op": "set" }, "min": 0, "max": 100 }
+        ]
+      },
+      {
+        "weight": 2,
+        "children": [
+          { "type": "button", "text": "Previous", "icon": "⏮", "action": "__keys", "args": { "keys": ["media_prev"] } },
+          { "type": "button", "text": "Play / Pause", "icon": "⏯", "action": "__keys", "args": { "keys": ["media_play_pause"] }, "primary": true },
+          { "type": "button", "text": "Next", "icon": "⏭", "action": "__keys", "args": { "keys": ["media_next"] } }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Mute", "icon": "🔇", "action": "__volume", "args": { "op": "mute" } },
+          { "type": "button", "text": "Vol −", "icon": "−", "action": "__volume", "args": { "op": "down" } },
+          { "type": "button", "text": "Vol +", "icon": "+", "action": "__volume", "args": { "op": "up" } },
+          { "type": "button", "text": "Stop", "icon": "⏹", "action": "__keys", "args": { "keys": ["media_stop"] }, "compact": true }
+        ]
+      },
+      {
+        "weight": 1,
+        "children": [
+          { "type": "button", "text": "Rewind 10s", "icon": "↺", "action": "__keys", "args": { "keys": ["left"] } },
+          { "type": "button", "text": "Fullscreen", "icon": "⛶", "action": "__keys", "args": { "keys": ["f"] } },
+          { "type": "button", "text": "Forward 10s", "icon": "↻", "action": "__keys", "args": { "keys": ["right"] } }
+        ]
+      }
+    ]
+  },
+  "actions": {}
+}
